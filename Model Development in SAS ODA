@@ -1,0 +1,447 @@
+/* Step-1  Data Import into SAS environment */
+
+%web_drop_table(WORK.Data2);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/Data2.xls';
+
+proc import DATAFILE=REFFILE
+	DBMS=xls
+	OUT=WORK.Sample_Data;
+	GETNAMES=YES;
+	guessingrows=All;
+run;
+%web_open_table(WORK.Data2);
+
+/* Data Exploration */
+
+proc contents data=Work.Sample_Data;
+run;
+
+/* Looking for Missing value & outliers */
+Proc means data=Work.Sample_Data N Nmiss  mean median mode  min max std skewness kurtosis P1 P10 P25 P50 P75 P90 P95 P99 ;
+run;
+
+/* Outliers plot */
+
+%macro variable(input=);
+proc sgplot data=Work.Sample_Data;
+vbox &input;
+run;
+%mend;
+
+%variable(input=Age);
+%variable(input=enq012_bank1);
+%variable(input=enq012_bank2);
+%variable(input=enq012allbanks);
+%variable(input=enq006same_bank);
+
+/* Test for variable plot with Target Variable */
+proc gplot data=Work.Sample_Data;
+plot Bads*PAYMENT_LATEST_PAYMENT_METHOD;
+run;
+
+/* Frequency Distribution of Variables */
+
+%Let Var= PAYMENT_LATEST_PAYMENT_METHOD PAYMENT_AUTODEBIT LOAN_AMOUNT PAYMENT_MISSED_PAYMENTS_BUCKET EMI_BUCKET BANKS_MOBILEAPPUSAGE_DUR_BUCKET
+PROFILE_CONTRACT_TENURE_BANK CASA_TRANSACTION_AMOUNT_PERMONTH CASA_TRNX_BUCKET CASA_TRANS_DEBIT_BUCKET CASA_TRANS_CREDIT_BUCKET NUMBER_OF_CREDIT_PRODUCTS_WITH_B
+NUMBER_OF_LIABILITIES_PRODUCTS_W Age enq012_bank1 enq012_bank2 enq012allbanks enq006same_bank ;
+
+proc freq data=work.Sample_Data;
+Tables &Var;
+run;
+
+
+/* Missing Value & outlier treatment */
+
+/* Mode value is taken into consideration---For Missing Value */
+/* 99th P capping for outliers */
+
+Data Work.Sample_Data1(drop=CASA_TRNX_BUCKET);
+set Work.Sample_Data;
+if PAYMENT_LATEST_PAYMENT_METHOD eq . then PAYMENT_LATEST_PAYMENT_METHOD=1;
+if EMI_BUCKET eq . then EMI_BUCKET= 2;
+if NUMBER_OF_LIABILITIES_PRODUCTS_W eq . then NUMBER_OF_LIABILITIES_PRODUCTS_W=2;
+
+/* Outliers */
+if Age >70 then Age=70;
+if enq012_bank1>3 the enq012_bank1=3;
+if enq012_bank2>2 the enq012_bank2=2;
+if enq012allbanks>11 then enq012allbanks=11;
+if enq006same_bank>5 then enq006same_bank=5;
+
+/* Domain related variables */
+/*Variables Like PROFILE_CONTRACT_TENURE_BANK, CASA_TRANSACTION_AMOUNT_PERMONTH_BUCKET,CASA_TRNX_BUCKET  Needs missing value treatment*/
+
+if PROFILE_CONTRACT_TENURE_BANK eq . then PROFILE_CONTRACT_TENURE_BANK=24;
+if CASA_TRANSACTION_AMOUNT_PERMONTH eq . then CASA_TRANSACTION_AMOUNT_PERMONTH= 1;
+
+CASA_TRNX_BUCKET1= CASA_TRANS_DEBIT_BUCKET + CASA_TRANS_CREDIT_BUCKET;
+/* if CASA_TRNX_BUCKET1 =2 then CASA_TRNX_BUCKET1=1; */
+/* if CASA_TRNX_BUCKET1=4 then CASA_TRNX_BUCKET1=2; */
+/* if CASA_TRNX_BUCKET1=6 then CASA_TRNX_BUCKET1=3; */
+/* if CASA_TRNX_BUCKET1=8 then CASA_TRNX_BUCKET1=4; */
+/* if CASA_TRNX_BUCKET1=10 then CASA_TRNX_BUCKET1=5; */
+run;
+
+/* Look back the data after treatment */
+
+proc means data= work.Sample_Data1 N Nmiss  mean median mode  min max std skewness kurtosis P1 P10 P25 P50 P75 P90 P95 P99 ;
+run;
+
+/* Now Devide the Data into Development & Test */
+
+data train test;
+set work.Sample_Data1;
+if rand('uniform')<=0.3 then output test;
+else output train;
+run;
+
+/*
+proc surveyselect data=Work.sample_Data Method=SRS SAMPRATE=0.7 out= Train1;
+run;
+*/
+
+/* Distribution of Target variable in Train & test data */
+
+proc freq data=Train;
+table bads;
+run;
+
+Proc freq data =Test;
+table bads;
+run;
+
+/* Checking the corelation between Predictors */
+
+%Let Var1= PAYMENT_LATEST_PAYMENT_METHOD
+PAYMENT_AUTODEBIT
+LOAN_AMOUNT
+PAYMENT_MISSED_PAYMENTS_BUCKET
+EMI_BUCKET
+BANKS_MOBILEAPPUSAGE_DUR_BUCKET
+PROFILE_CONTRACT_TENURE_BANK
+CASA_TRANSACTION_AMOUNT_PERMONTH
+CASA_TRANS_DEBIT_BUCKET
+CASA_TRANS_CREDIT_BUCKET
+NUMBER_OF_CREDIT_PRODUCTS_WITH_B
+NUMBER_OF_LIABILITIES_PRODUCTS_W
+Age
+enq012_bank1
+enq012_bank2
+enq012allbanks
+enq006same_bank
+CASA_TRNX_BUCKET1 ;
+
+
+proc corr data=Work.Sample_Data1;
+variables &var1;
+run;
+
+
+/*  Base Model-1 */
+
+
+proc logistic data=Train descending outest=Train_model outmodel=Train_model1;
+model Bads= &var1 /lackfit rsquare selection=stepwise /*slentry=0.25 slstay=0.15 */ details Parmlabel ;
+/*oddsratio &var;*/
+output out= Train1 p=pred;
+score data=Test out=validate1;
+run;
+
+
+proc export data=work.Train_model
+outfile="C:\Users\GB-BCP\SAS_WORK\Train_model.csv"
+replace;
+run;
+
+/* Base Model- 2 After significance level of 0.25 */
+
+proc logistic data=Train descending outest=Train_model outmodel=Train_model1;
+model Bads= &var1 /lackfit rsquare selection=stepwise slentry=0.25  details Parmlabel ;
+/*oddsratio &var;*/
+output out= Train2 p=pred;
+run;
+
+/* Base Model- 3 After significance level of 0.25 and staying significance level is also 0.25 */
+
+proc logistic data=Train descending outest=Train_model outmodel=Train_model1;
+model Bads= &var1 /lackfit rsquare selection=stepwise slentry=0.10 slstay=0.15  details Parmlabel ;
+output out= Train3 p=pred;
+/*oddsratio &var;*/
+run;
+
+/* Variable creations Credit/Debit Ratio--(LOAN_AMOUNT +CASA_TRANS_CREDIT_BUCKET)/(CASA_TRANS_DEBIT_BUCKET) */
+
+data work.Sample_data2;
+set work.Sample_data1;
+Credit_to_debit_ratio=round((LOAN_AMOUNT)/(CASA_TRANS_DEBIT_BUCKET),0.1); /* Assuming no any credit outstanding */
+Credit_to_debit_ratio1=round((LOAN_AMOUNT +CASA_TRANS_CREDIT_BUCKET)/(CASA_TRANS_DEBIT_BUCKET),0.1); /* Assuming some credit outstanding */
+/*
+format Credit_to_debit_ratio percent8.1;
+format Credit_to_debit_ratio1 Percent8.1;
+*/
+run;
+
+%let Var2=Age
+BANKS_MOBILEAPPUSAGE_DUR_BUCKET
+CASA_TRANSACTION_AMOUNT_PERMONTH
+CASA_TRANS_CREDIT_BUCKET
+CASA_TRANS_DEBIT_BUCKET
+CASA_TRNX_BUCKET1
+Credit_to_debit_ratio
+Credit_to_debit_ratio1
+EMI_BUCKET
+LOAN_AMOUNT
+NUMBER_OF_CREDIT_PRODUCTS_WITH_B
+NUMBER_OF_LIABILITIES_PRODUCTS_W
+PAYMENT_AUTODEBIT
+PAYMENT_LATEST_PAYMENT_METHOD
+PAYMENT_MISSED_PAYMENTS_BUCKET
+PROFILE_CONTRACT_TENURE_BANK
+enq006same_bank
+enq012_bank1
+enq012_bank2
+enq012allbanks ;
+
+/* Now Devide the Data into Development & Test */
+
+data train test;
+set work.Sample_Data2;
+if rand('uniform')<=0.3 then output test;
+else output train;
+run;
+
+/* Base Model- 4 After significance level of 0.25 and staying significance level is also 0.25 */
+
+proc logistic data=Train descending outest=Train_model outmodel=Train_model1;
+model Bads= &var2 /lackfit rsquare selection=stepwise slentry=0.10 slstay=0.15  details Parmlabel ;
+output out= out2 p=pred;
+/*score data=Test out=Test_val; */
+/*oddsratio &var;*/
+run;
+
+
+%let var4=
+Age
+PAYMENT_AUTODEBIT
+BANKS_MOBILEAPPUSAGE_DUR_BUCKET
+PAYMENT_MISSED_PAYMENTS_BUCKET
+enq006same_bank
+PAYMENT_LATEST_PAYMENT_METHOD
+LOAN_AMOUNT
+;
+
+/* Variable reduction after considering the significance criteria */
+
+/* Model- 1 After significance level of 0.25 and staying significance level is also 0.25 */
+
+proc logistic data=Train descending outest=Train_model outmodel=Train_model1;
+model Bads(event="1")= &var4 /lackfit rsquare selection=stepwise slentry=0.10 slstay=0.15  details Parmlabel ;
+output out= out3 p=pred;
+/*oddsratio &var;*/
+run;
+
+/* Dropped LOAN_AMOUNT */
+
+
+%let var5=
+Age
+PAYMENT_AUTODEBIT
+BANKS_MOBILEAPPUSAGE_DUR_BUCKET
+PAYMENT_MISSED_PAYMENTS_BUCKET
+enq006same_bank
+PAYMENT_LATEST_PAYMENT_METHOD
+;
+
+/* Model- 2 After Dropped LOAN_AMOUNT AND  significance level of 0.25 and staying significance level is also 0.25 */
+
+proc logistic data=Train descending outest=Train_model outmodel=Train_model1;
+model Bads= &var5 /lackfit rsquare selection=stepwise slentry=0.10 slstay=0.15  details Parmlabel ;
+/*oddsratio &var;*/
+output out= out4 p=pred;
+run;
+
+/* Dropped PAYMENT_LATEST_PAYMENT_METHOD */
+
+%let var6=
+Age
+PAYMENT_AUTODEBIT
+BANKS_MOBILEAPPUSAGE_DUR_BUCKET
+PAYMENT_MISSED_PAYMENTS_BUCKET
+enq006same_bank
+;
+
+/* Model- 2 After Dropped PAYMENT_LATEST_PAYMENT_METHOD AND  significance level of 0.25 and staying significance level is also 0.25 */
+
+proc logistic data=Train descending outest=Train_model outmodel=Train_model1;
+model Bads= &var6 /lackfit rsquare selection=stepwise slentry=0.10 slstay=0.15  details Parmlabel ;
+/*oddsratio &var;*/
+output out= out5 p=pred;
+run;
+
+/* Applying PCA for variable reduction */
+
+proc factor data= Work.Sample_data2  NFACTORS=6 out=data3(rename=(Factor1=PC1 Factor2=PC2 Factor3=PC3 Factor4=PC4 Factor5=PC5 Factor6=PC6)) method=prin scree  /*rotate=varimax */;
+var &var2;
+run;
+
+
+/* Now Devide the Data into Development & Test */
+
+data train test;
+set work.data3;
+if rand('uniform')<=0.3 then output test;
+else output train;
+run;
+
+/* Model- 3 By using Principal components */
+
+%let Var7= PC1 PC2 PC3 PC4 PC5 PC6;
+
+proc logistic data=train descending outest=train_model outmodel=train_model1;
+model Bads= &var7 /lackfit rsquare selection=stepwise slentry=0.10 slstay=0.15  details Parmlabel ;
+/*oddsratio &var;*/
+output out= out6 p=pred;
+run;
+
+/* Dropped PC3 & PC6 */
+
+/* Model- 4 By using Principal components */
+
+%let Var8= PC1 PC2 PC4 PC5 ;
+
+proc logistic data=train descending outest=train_model outmodel=train_model1;
+model Bads= &var8 /lackfit rsquare selection=stepwise slentry=0.10 slstay=0.15  details Parmlabel ;
+/*oddsratio &var;*/
+output out= out7 p=pred;
+run;
+
+
+/* Model- 5 By using Principal components */
+
+%let Var9= PC2 PC4 PC5 ;
+
+proc logistic data=train descending outest=train_model outmodel=train_model1;
+model Bads= &var9 /lackfit rsquare selection=stepwise slentry=0.10 slstay=0.15  details Parmlabel ;
+output out= out8 p=pred;
+/*oddsratio &var;*/
+run;
+
+/* Model- 5 By using Principal components */
+
+%let Var10= PC2 PC4 PC6 PC1 PC5 PC3;
+
+proc logistic data=train descending outest=train_model outmodel=train_model1;
+model Bads= &var10 /lackfit rsquare selection=stepwise slentry=0.10 slstay=0.15  details Parmlabel ;
+/*oddsratio &var;*/
+output out= out9 p=pred;
+run;
+
+/* Split the data to Creating Decile */
+
+proc rank data=out2 groups=10 descending out=ranked;
+var Pred;
+ranks decile;
+run;
+
+data Ranked1;
+set ranked;
+if decile=0 then decile=0+1;
+else decile+1;
+run;
+
+
+proc sql;
+create table KS_data1 as
+select decile, count(_LEVEL_) as N from ranked1
+group by decile;
+quit;
+run;
+
+proc sort data=KS_data1 out=KS_data1;
+by decile;
+run;
+
+
+proc sql;
+create table KS_data2 as
+select decile, count(bads) as Event from ranked1 where bads=1
+group by decile;
+quit;
+run;
+
+proc sort data=KS_data2 out=KS_data2;
+by decile;
+run;
+
+proc sql;
+create table KS_data3 as
+select decile, count(bads) as Non_Event from ranked1 where bads=0
+group by decile;
+quit;
+run;
+
+proc sort data=KS_data3 out=KS_data3;
+by decile;
+run;
+
+data KS_data;
+merge KS_data1(in=a) KS_data2(in=b) KS_data3(in=c);
+by decile;
+if a;
+run;
+
+/* KS Statitics for Models */
+
+proc npar1way data=out9 edf;
+class bads;
+var Pred;
+run;
+
+proc freq data=out2;
+table bads * _LEVEL_;
+run;
+
+
+/* Data Test */
+
+data customer;
+input customer $ income;
+datalines;
+A  100
+A  150
+B  200
+B  150
+B  250
+C  250
+C  300
+D  100
+D  200
+E  200
+F  100
+;
+RUN;
+
+proc rank data=customer out=customer1 descending ties=dense;
+by customer;
+var income;
+Ranks IncomeRank;
+run;
+
+proc sql;
+select a.* from customer1 as a where IncomeRank=2;
+quit;
+run;
+
+/*
+proc summary data=Customer print;
+var income;
+output out= test1;
+run;
+*/
+
+
+
+
+
+
