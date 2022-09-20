@@ -1,0 +1,198 @@
+- 👋 Hi, I’m @AmitK0105
+- 👀 I’m interested in ...
+- 🌱 I’m currently learning ...
+- 💞️ I’m looking to collaborate on ...
+- 📫 How to reach me ...
+
+<!---
+AmitK0105/AmitK0105 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+--->
+
+%web_drop_table(WORK.Data_OLAP_July_J1);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/Data_OLAP_July_J1.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.Data_OLAP_July_J1;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.Data_OLAP_July_J1);
+
+
+%web_drop_table(WORK.Data_OLAP_Aug_J1);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/Data_OLAP_Aug_J1.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.Data_OLAP_Aug_J1;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.Data_OLAP_Aug_J1);
+
+
+%web_drop_table(WORK.Data_OLAP_Sep_J1);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/Data_OLAP_Sep_J1.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.Data_OLAP_Sep_J1;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.Data_OLAP_Sep_J1);
+
+
+proc sql;
+
+create table xys as
+select Vendor_settled_date, count(*) from Data_20220908042108958_J1
+group by Vendor_settled_date;
+quit;
+run;
+
+
+data ROLAP_J1;
+SET Data_OLAP_July_J1 Data_OLAP_Aug_J1 Data_OLAP_Sep_J1;
+Brand="JBO";
+run;
+
+/* F1 Data */
+
+%web_drop_table(WORK.Data_OLAP_July_F1);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/Data_OLAP_July_F1.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.Data_OLAP_July_F1;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.Data_OLAP_July_F1);
+
+
+%web_drop_table(WORK.Data_OLAP_offAug_F1);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/Data_OLAP_offAug_F1.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.Data_OLAP_offAug_F1;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.Data_OLAP_offAug_F1);
+
+
+%web_drop_table(WORK.Data_OLAP_offAug1_F1);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/Data_OLAP_offAug1_F1.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.Data_OLAP_offAug1_F1;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.Data_OLAP_offAug1_F1);
+
+
+
+%web_drop_table(WORK.Data_OLAP_Sep_F1);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/Data_OLAP_Sep_F1.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.Data_OLAP_Sep_F1;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.Data_OLAP_Sep_F1);
+
+
+
+data ROLAP_F1(drop=Affiliate_Code rename=(Affiliate_Code1=Affiliate_Code));
+
+SET Data_OLAP_July_F1 Data_OLAP_offAug_F1 Data_OLAP_offAug1_F1 Data_OLAP_Sep_F1 ;
+Brand="Fun88";
+informat Affiliate_Code 12.;
+Affiliate_Code1= put(Affiliate_Code, 8.);
+format Affiliate_Code1 best32.;
+
+run;
+
+
+
+%web_drop_table(WORK.Data_OLAP_Sep_T1);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/Data_OLAP_Sep_T1.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.Data_OLAP_Sep_T1;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.Data_OLAP_Sep_T1);
+
+
+data ROLAP_T1(drop=Affiliate_Code rename=(Affiliate_Code1=Affiliate_Code));
+SET Data_OLAP_Sep_T1;
+Brand="TLC88";
+informat Affiliate_Code 12.;
+Affiliate_Code1= put(Affiliate_Code, 8.);
+format Affiliate_Code1 best32.;
+run;
+
+
+%web_drop_table(WORK.Data_OLAP_Aug_P1);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/Data_OLAP_Aug_P1.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.Data_OLAP_Aug_P1;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.Data_OLAP_Aug_P1);
+
+
+%web_drop_table(WORK.Data_OLAP_Sep_P1);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/Data_OLAP_Sep_P1.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.Data_OLAP_Sep_P1;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.Data_OLAP_Sep_P1);
+
+
+
+data ROLAP_P1(drop=Affiliate_Code rename=(Affiliate_Code1=Affiliate_Code));
+SET Data_OLAP_Aug_P1  Data_OLAP_Sep_P1;
+Brand="Betway";
+informat Affiliate_Code 12.;
+Affiliate_Code1= put(Affiliate_Code, 8.);
+format Affiliate_Code1 best32.;
+run;
+
+Data Compliance_ROLAP;
+set ROLAP_F1 ROLAP_J1 ROLAP_T1 ROLAP_P1;
+run;
+
+
+proc export data=Compliance_ROLAP(compress=binary)
+outfile="/home/amitk.pr15/sasuser.v94/SAS_WORK/Compliance_ROLAP.txt"
+replace;
+run;
