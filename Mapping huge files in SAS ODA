@@ -1,0 +1,672 @@
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220401);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220401.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220401;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220401);
+
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220402);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220402.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220402;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220402);
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220403);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220403.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220403;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220403);
+
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220404);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220404.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220404;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220404);
+
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220405);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220405.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220405;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220405);
+
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220406);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220406.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220406;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220406);
+
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220407);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220407.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220407;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220407);
+
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220408);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220408.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220408;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220408);
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220409);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220409.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220409;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220409);
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220410);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220410.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220410;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220410);
+
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220411);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220411.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220411;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220411);
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220412);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220412.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220412;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220412);
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220413);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220413.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220413;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220413);
+
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220414);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220414.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220414;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220414);
+
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220415);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220415.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220415;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220415);
+
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220416);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220416.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220416;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220416);
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220417);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220417.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220417;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220417);
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220418);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220418.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220418;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220418);
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220419);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220419.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220419;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220419);
+
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220420);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220420.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220420;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220420);
+
+
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220421);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220421.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220421;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220421);
+
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220422);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220422.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220422;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220422);
+
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220423);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220423.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220423;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220423);
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220424);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220424.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220424;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220424);
+
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220425);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220425.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220425;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220425);
+
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220426);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220426.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220426;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220426);
+
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220427);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220427.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220427;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220427);
+
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220428);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220428.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220428;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220428);
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220429);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220429.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220429;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220429);
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220430);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220430.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220430;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220430);
+
+%web_drop_table(WORK.sample.F1M3_offevents3_20220431);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.F1M3_offevents3_20220431.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.F1M3_offevents3_20220431;
+	GETNAMES=YES;
+	guessingrows=5000;
+RUN;
+%web_open_table(WORK.sample.F1M3_offevents3_20220431);
+
+
+
+/*
+proc sql;
+drop table work.Events_All ;
+quit;
+*/
+
+options compress=yes;
+%Macro New_data(input=);
+proc append base=work.SessionDataJ1M3 data=&input force ;
+run;
+%mend;
+
+%New_data(input=work.F1M3_offevents3_20220401)
+%New_data(input=work.F1M3_offevents3_20220402)
+%New_data(input=work.F1M3_offevents3_20220403)
+%New_data(input=work.F1M3_offevents3_20220404)
+%New_data(input=work.F1M3_offevents3_20220405)
+%New_data(input=work.F1M3_offevents3_20220406)
+%New_data(input=work.F1M3_offevents3_20220407)
+%New_data(input=work.F1M3_offevents3_20220408)
+%New_data(input=work.F1M3_offevents3_20220409)
+%New_data(input=work.F1M3_offevents3_20220410)
+%New_data(input=work.F1M3_offevents3_20220411)
+%New_data(input=work.F1M3_offevents3_20220412)
+%New_data(input=work.F1M3_offevents3_20220413)
+%New_data(input=work.F1M3_offevents3_20220414)
+%New_data(input=work.F1M3_offevents3_20220415)
+%New_data(input=work.F1M3_offevents3_20220416)
+%New_data(input=work.F1M3_offevents3_20220417)
+%New_data(input=work.F1M3_offevents3_20220418)
+%New_data(input=work.F1M3_offevents3_20220419)
+%New_data(input=work.F1M3_offevents3_20220420)
+%New_data(input=work.F1M3_offevents3_20220421)
+%New_data(input=work.F1M3_offevents3_20220422)
+%New_data(input=work.F1M3_offevents3_20220423)
+%New_data(input=work.F1M3_offevents3_20220424)
+%New_data(input=work.F1M3_offevents3_20220425)
+%New_data(input=work.F1M3_offevents3_20220426)
+%New_data(input=work.F1M3_offevents3_20220427)
+%New_data(input=work.F1M3_offevents3_20220428)
+%New_data(input=work.F1M3_offevents3_20220429)
+%New_data(input=work.F1M3_offevents3_20220430)
+%New_data(input=work.F1M3_offevents3_20220431)
+
+
+/* Checks */
+
+Data J1M3_test;
+set work.SessionDataJ1M3;
+where visitor_id="d2fc745ba744c1e4";
+run;
+
+
+%web_drop_table(WORK.SessionDataF1M3_All_Set3);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/SessionDataF1M3_All_Set3.txt';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=dlm
+	OUT=WORK.SessionDataF1M3_All_Set3;
+	GETNAMES=YES;
+	guessingrows=5000;
+	delimiter='09'x;
+RUN;
+%web_open_table(WORK.SessionDataF1M3_All_Set3);
+
+
+
+proc sql;
+create table test1 as
+select distinct visitor_id, user_id, count(user_id) as cnt from work.SessionDataJ1M3_All where D_date ='02JAN2022'd and visitor_id like "%0dca710%"
+group by visitor_id, user_id;
+quit;
+run;
+
+
+proc contents data=work.SessionDataJ1M3;
+run;
+
+
+/* Design Summary Table */-----
+
+Data work.SessionDataJ1M3_All (drop=VAR1 session_entry_url keyword referrer_url revenue event_type goal_id /*event_url*/ VAR29 next_event_url VAR31 event_title visitor_returning custom_event_value referrer_type browser_name operating_system device_type location_country_name location_city_name /*previous_event_url*/ website_name previous_event_title next_event_title session_goals session_ecommerce_status  rename=(VAR15=visitor_returning VAR17=event_category /*VAR29=session_total_downloads VAR31=session_total_events*/ VAR41=Goal_Category VAR44=session_ecommerce_status VAR50=referrer_type VAR56=operating_system VAR58=browser_name VAR60=device_type VAR62=location_country_name VAR64=location_city_name VAR66=session_entry_url VAR69=website_name)compress=binary);
+set work.SessionDataJ1M3;
+D_Date=datepart(timestamp);
+/*T_time=timepart(timestamp)*/;
+format D_Date date9.;
+/*format T_time time8.*/;
+run;
+/*CHECKS ---46 column*/
+
+
+Data work.SessionDataF1M3_All_Set4 (drop=VAR1 session_entry_url session_unique_custom_events session_unique_searches session_unique_downloads session_unique_outlinks session_total_abandoned_carts session_total_ecommerce_conversi session_total_goal_conversions visitor_session_number session_total_custom_events session_total_downloads session_total_site_searches keyword referrer_url revenue event_type goal_id /*event_url*/ VAR29 next_event_url VAR31 event_title visitor_returning custom_event_value referrer_type browser_name operating_system device_type location_country_name location_city_name /*previous_event_url*/ website_name previous_event_title next_event_title session_goals session_ecommerce_status  rename=(VAR15=visitor_returning VAR17=event_category /*VAR29=session_total_downloads VAR31=session_total_events*/ VAR41=Goal_Category VAR44=session_ecommerce_status VAR50=referrer_type VAR56=operating_system VAR58=browser_name VAR60=device_type VAR62=location_country_name VAR64=location_city_name VAR66=session_entry_url VAR69=website_name)compress=binary);
+set work.SessionDataJ1M3;
+D_Date=datepart(timestamp);
+/*T_time=timepart(timestamp)*/;
+format D_Date date9.;
+/*format T_time time8.*/;
+run;
+/*CHECKS --35 column*/
+
+proc export data=SessionDataF1M3_All_Set4(compress=binary)
+outfile="/home/amitk.pr15/sasuser.v94/SAS_WORK/SessionDataF1M3_All_Set4.txt"
+replace;
+run;
+
+
+
+proc sql;
+select D_Date, count(*) as cnt from work.SessionDataJ1M3_All
+group by D_Date;
+quit;
+run;
+
+
+proc sql;
+select is_bounce, count(*) as cnt from work.SessionDataJ1M3_All
+group by is_bounce;
+quit;
+run;
+
+
+proc sql;
+select website_name, count(*) as cnt from work.SessionDataJ1M3_All
+group by website_name;
+quit;
+run;
+
+proc sql;
+select device_type, count(*) as cnt from work.SessionDataJ1M3_All
+group by device_type;
+quit;
+run;
+
+proc sql;
+select browser_name, count(*) as cnt from work.SessionDataJ1M3_All
+group by browser_name;
+quit;
+run;
+
+
+proc sql;
+select campaign_name, campaign_id,campaign_content, count(*) as cnt from work.SessionDataJ1M3_All
+group by campaign_name, campaign_id,campaign_content;
+quit;
+run;
+
+
+proc sql;
+select D_date,website_name, count(*) as cnt from work.SessionDataJ1M3_All
+group by D_date,website_name;
+quit;
+run;
+
+proc sql;
+select event_id, count(*) as cnt from work.SessionDataJ1M3_All1 where D_date ='01AUG2021'd
+group by event_id;
+quit;
+runs;
+
+
+option compress=Binary;
+
+Proc sql;
+create table SessionDataF1M3_All_set2 as
+select visitor_id, user_id, timestamp, D_date, website_name, session_id, event_id, custom_event_category, custom_event_action, custom_event_name, visitor_returning,event_category,
+Goal_Category,session_ecommerce_status, source, medium, source_medium,referrer_type,/*campaign_name,campaign_id,campaign_content,*/ operating_system,browser_name,device_type,
+location_country_name,location_city_name, session_exit_url,session_entry_url,event_url,previous_event_url, is_bounce,
+
+sum(session_total_events) as session_total_events,
+sum(session_total_time) as session_total_time,
+sum(time_on_page) as time_on_page,
+/*
+sum(session_total_downloads) as session_total_downloads,
+sum(session_total_site_searches) as session_total_site_searches,
+sum(session_total_custom_events) as session_total_custom_events,
+sum(visitor_session_number) as visitor_session_number,
+*/
+count(session_total_page_views) as session_total_page_views
+/*
+sum(session_total_goal_conversions) as session_total_goal_conversions,
+sum(session_total_ecommerce_conversi) as sesn_total_ecommerce_conversion,
+sum(session_total_abandoned_carts) as session_total_abandoned_carts,
+sum(session_unique_outlinks) as session_unique_outlinks,
+sum(session_unique_downloads) as session_unique_downloads,
+sum(session_unique_searches) as session_unique_searches,
+sum(session_unique_custom_events) as session_unique_custom_events 
+*/
+
+from SessionDataJ1M3_All 
+group by  visitor_id, user_id, timestamp, D_date, website_name,session_id, event_id, custom_event_category, custom_event_action, custom_event_name, visitor_returning,event_category,
+Goal_Category,session_ecommerce_status, source, medium,source_medium,referrer_type,/*campaign_name,campaign_id,campaign_content,*/ operating_system,browser_name,device_type,
+location_country_name,location_city_name,session_exit_url,session_entry_url,event_url,previous_event_url, is_bounce;
+quit;
+run;
+
+
+proc export data=SessionDataF1M3_All_set2(compress=binary)
+outfile="/home/amitk.pr15/sasuser.v94/SAS_WORK/SessionDataF1M3_All_set2.txt"
+replace;
+run;
+
+
+option compress=Binary|CHAR;
+data SessionDataJ1M3_All(compress=Binary);
+SET SessionDataJ1M3_All_30;
+run;
+
+proc sql;
+create table test22 as
+select a.*, case when a.event_url like  "%aff=%"   then substr(event_url, index(event_url,'aff='), 11)
+end as Affiliated
+from SessionDataJ1M3_All_Final1_30 as a where a.event_url like  "%aff=%"  ;
+quit;
+run;
+
+data test33(keep=Visitor_id b b1 c1 Affiliated);
+set test22;
+b1=index(event_url,"aff");
+c1=find(event_url,"aff");
+b=substr(event_url, 47, 10);
+run;
+
+
+proc sql outobs=10;
+create table drs as
+select time_on_page, session_total_page_views,session_unique_custom_events from SessionDataJ1M3_All_Final;
+quit;
+run;
+
+
+data SessionDataP1M2_All_Final(compress=Binary);
+set SessionDataJ1M3_All /*SessionDataJ1M3_All_Final1_15 */;
+run;
+
+data SessionDataP1M2_All_Offset1(compress=Binary);
+/*set SessionDataJ1M3_All_Final1_30 /*SessionDataJ1M3_All_Final1_15 */;
+set  SessionDataJ1M3_All;
+run;
+
+/*
+option compress=Binary|CHAR;
+option SQUEEZE=yes;
+*/
+
+proc export data=SessionDataP1M2_All_Final(compress=binary)
+outfile="C:\Users\GB-BCP\SAS_WORK\SessionDataP1M2_All_Final.txt"
+replace;
+run;
+
+proc export data=SessionDataP1M2_All_Offset1(compress=binary)
+outfile="C:\Users\GB-BCP\SAS_WORK\SessionDataP1M2_All_Offset1.txt"
+replace;
+run;
+
+proc contents data=work.SessionDataJ1M3_All_Final1;
+run;
+
+/* OLAP Match analysis*/
+
+Proc sql;
+
+create table sessiondata(keep=visitor_id session_id user_id event_id custom_event_name custom_event_name1) as
+select a.*, case when a.custom_event_name like "Regis%" then "Register_case"
+else "Unregistered"
+end as custom_event_name1
+from SessionDataJ1M3_All as a;
+quit;
+run;
+
+
+proc sql;
+
+select custom_event_name, custom_event_name1, count(*) as cnt from sessiondata
+group by custom_event_name, custom_event_name1;
+quit;
+run;
+
