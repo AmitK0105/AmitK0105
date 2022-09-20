@@ -1,0 +1,801 @@
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211201);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211201.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211201;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211201);
+
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211202);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211202.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211202;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211202);
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211203);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211203.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211203;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211203);
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211204);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211204.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211204;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211204);
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211205);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211205.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211205;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211205);
+
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211206);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211206.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211206;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211206);
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211207);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211207.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211207;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211207);
+
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211208);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211208.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211208;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211208);
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211209);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211209.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211209;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211209);
+
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211210);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211210.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211210;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211210);
+
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211211);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211211.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211211;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211211);
+
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211212);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211212.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211212;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211212);
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211213);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211213.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211213;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211213);
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211214);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211214.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211214;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211214);
+
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211215);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211215.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211215;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211215);
+
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211216);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211216.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211216;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211216);
+
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211217);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211217.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211217;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211217);
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211218);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211218.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211218;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211218);
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211219);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211219.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211219;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211219);
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211220);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211220.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211220;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211220);
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211221);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211221.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211221;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211221);
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211222);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211222.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211222;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211222);
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211223);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211223.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211223;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211223);
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211224);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211224.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211224;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211224);
+
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211225);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211225.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211225;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211225);
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211226);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211226.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211226;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211226);
+
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211227);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211227.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211227;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211227);
+
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211228);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211228.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211228;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211228);
+
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211229);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211229.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211229;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211229);
+
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211230);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211230.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211230;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211230);
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20211231);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20211231.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20211231;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20211231);
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20220101);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20220101.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20220101;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20220101);
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20220102);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20220102.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20220102;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20220102);
+
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20220103);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20220103.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20220103;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20220103);
+
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20220104);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20220104.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20220104;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20220104);
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20220105);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20220105.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20220105;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20220105);
+
+
+%web_drop_table(WORK.sample.J1M3Appevents1_20220106);
+
+FILENAME REFFILE '/home/amitk.pr15/sasuser.v94/SAS_WORK/sample.J1M3Appevents1_20220106.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.J1M3Appevents1_20220106;
+	GETNAMES=YES;
+	guessingrows=3000;
+RUN;
+%web_open_table(WORK.sample.J1M3Appevents1_20220106);
+
+/*
+proc sql;
+drop table work.Events_All ;
+quit;
+*/
+
+
+options compress=yes;
+%Macro New_data(input=);
+proc append base=work.SessionDataJ1M3App(compress=binary) data=&input force ;
+run;
+%mend;
+
+
+%NeW_data(input=work.J1M3Appevents1_20211201);
+%NeW_data(input=work.J1M3Appevents1_20211202);
+%NeW_data(input=work.J1M3Appevents1_20211203);
+%NeW_data(input=work.J1M3Appevents1_20211204);
+%NeW_data(input=work.J1M3Appevents1_20211205);
+%NeW_data(input=work.J1M3Appevents1_20211206);
+
+%NeW_data(input=work.J1M3Appevents1_20211207);
+%NeW_data(input=work.J1M3Appevents1_20211208);
+%NeW_data(input=work.J1M3Appevents1_20211209);
+%NeW_data(input=work.J1M3Appevents1_20211210);
+%NeW_data(input=work.J1M3Appevents1_20211211);
+%NeW_data(input=work.J1M3Appevents1_20211212);
+%NeW_data(input=work.J1M3Appevents1_20211213);
+%NeW_data(input=work.J1M3Appevents1_20211214);
+
+%NeW_data(input=work.J1M3Appevents1_20211215);
+%NeW_data(input=work.J1M3Appevents1_20211216);
+%NeW_data(input=work.J1M3Appevents1_20211217);
+%NeW_data(input=work.J1M3Appevents1_20211218);
+%NeW_data(input=work.J1M3Appevents1_20211219);
+%NeW_data(input=work.J1M3Appevents1_20211220);
+%NeW_data(input=work.J1M3Appevents1_20211221);
+%NeW_data(input=work.J1M3Appevents1_20211222);
+
+%NeW_data(input=work.J1M3Appevents1_20211223);
+%NeW_data(input=work.J1M3Appevents1_20211224);
+%NeW_data(input=work.J1M3Appevents1_20211225);
+%NeW_data(input=work.J1M3Appevents1_20211226);
+%NeW_data(input=work.J1M3Appevents1_20211227);
+%NeW_data(input=work.J1M3Appevents1_20211228);
+%NeW_data(input=work.J1M3Appevents1_20211229);
+%NeW_data(input=work.J1M3Appevents1_20211230);
+%NeW_data(input=work.J1M3Appevents1_20211231);
+
+
+%NeW_data(input=work.J1M3Appevents1_20220101);
+%NeW_data(input=work.J1M3Appevents1_20220102);
+%NeW_data(input=work.J1M3Appevents1_20220103);
+
+%NeW_data(input=work.J1M3Appevents1_20220104);
+%NeW_data(input=work.J1M3Appevents1_20220105);
+
+
+
+PROC SQL;
+Create table SessionDataJ1M3App as 
+
+select a.*, case when visitor_returning eq 0 then "New"
+when visitor_returning eq 1 then "Returning"
+end as VAR155 
+FROM  WORK.SessionDataJ1M3App  as a;
+quit;
+
+proc sql;
+select VAR155,  visitor_returning, count(*) as cnt from  WORK.SessionDataJ1M3App 
+group by VAR155, visitor_returning;
+quit;
+
+
+
+Data work.SessionDataJ1M3App_All1(compress=binary drop=VAR1 session_entry_url keyword referrer_url visitor_returning revenue event_type goal_id /*event_url */ VAR29 next_event_url VAR31 event_title  custom_event_value referrer_type browser_name operating_system device_type location_country_name location_city_name previous_event_url website_name previous_event_title next_event_title session_goals session_ecommerce_status rename=(VAR15=visitor_returning VAR17=event_category /*VAR29=session_total_downloads VAR31=session_total_events*/ VAR41=Goal_Category VAR44=session_ecommerce_status VAR50=referrer_type VAR56=operating_system VAR58=browser_name VAR60=device_type VAR62=location_country_name VAR64=location_city_name VAR66=session_entry_url VAR69=website_name));
+set work.SessionDataJ1M3App ;
+D_Date=datepart(timestamp);
+/*T_time=timepart(timestamp)*/;
+format D_Date date9.;
+/*format T_time time8.*/;
+run;
+/*CHECKS */
+
+
+proc sort data=SessionDataJ1M3App_All1 out= SessionDataJ1M3App_All2;
+by session_id visitor_id;
+run;
+
+data SessionDataJ1M3App_All2(compress=binary /*keep=session_id visitor_id timestamp timestamp1 Diff*/);
+set  SessionDataJ1M3App_All1 ;
+timestamp1=lag(timestamp);
+format timestamp1 datetime21.;
+Diff=round((timestamp-timestamp1)/60,1);
+/*if Diff = -31 then session_n=1;
+if Diff=. then session_n=100;
+else session_n=0;
+*/
+run;
+
+proc sql;
+create table J1M3App_Exp as 
+select a.*, case when a.Diff <= -30 then 1
+when a.Diff =. then 100
+else 0
+end as session_n 
+from SessionDataJ1M3App_All2 as a;
+quit;
+run;
+
+proc sql;
+create table J1M3App_Sim as
+select a.*, case when a.Diff <=-30 then 1
+else 0 end as session_cnt
+from J1M3App_Exp as a;
+quit;
+run;
+
+
+proc sql;
+create table work.EventsJ1M3App_New as
+select D_Date, website_name, custom_event_category,custom_event_action, event_category, visitor_returning, device_type, event_url, sum(time_on_page) as time_on_page, count(visitor_id) as Visitors, count(distinct(visitor_id)) as Unique_visitors, 
+count(session_total_events) as events, count(distinct(session_total_events)) as unique_events,count(session_total_custom_events) as custom_events,count(distinct(user_id)) as Unique_users, count(user_id) as Users,
+count(distinct(session_total_custom_events)) as unique_custom_events,count(distinct(session_id)) as session,count(session_id) as Session1 /*sum(session_cnt) as session_count*/, sum(is_bounce) as Bounce
+from J1M3App_Sim /*EventsJ1M3App_All where custom_event_category not in('')*/
+group by D_Date,website_name, custom_event_category, event_category, visitor_returning, device_type,event_url;
+quit;
+run;
+
+/* For October data */
+
+proc sql;
+create table work.EventsJ1M3App_New1(compress=yes) as
+select a.*, case when a.D_Date between '27SEP2021'd and '03OCT2021'd then '27Sep-03rdOct2021'
+when a.D_Date between '04OCT2021'd and '10OCT2021'd then '04Oct-10thOct2021'
+when a.D_Date between '11OCT2021'd and '17OCT2021'd then '11Oct-17thOct2021'
+when a.D_Date between '17OCT2021'd and '24OCT2021'd then '17Oct-24thOct2021'
+when a.D_Date between '25OCT2021'd and '31OCT2021'd then '25Oct-31stOct2021'
+when a.D_Date between '01NOV2021'd and '07NOV2021'd then '01Nov-07thNov2021'
+when a.D_Date between '08NOV2021'd and '14NOV2021'd then '08Nov-14thNov2021'
+when a.D_Date between '15NOV2021'd and '21NOV2021'd then '15Nov-21stNov2021'
+when a.D_Date between '22NOV2021'd and '28NOV2021'd then '22Nov-28thNov2021'
+when a.D_Date between '29NOV2021'd and '05DEC2021'd then '29Nov-05thDec2021'
+when a.D_Date between '06DEC2021'd and '12DEC2021'd then '06Dec-12thDec2021'
+when a.D_Date between '13DEC2021'd and '19DEC2021'd then '13Dec-19thDec2021'
+when a.D_Date between '20DEC2021'd and '26DEC2021'd then '20Dec-26thDec2021'
+when a.D_Date between '27DEC2021'd and '02JAN2022'd then '27Dec-02ndJan2022'
+when a.D_Date between '03JAN2022'd and '09JAN2022'd then '03Jan-09thJan2022'
+when a.D_Date between '10JAN2022'd and '16JAN2022'd then '10Jan-16thJan2022'
+when a.D_Date between '17JAN2022'd and '23JAN2022'd then '17Jan-23rdJan2022'
+
+end as Month_Week,
+
+case when a.D_Date between '27SEP2021'd and '03OCT2021'd then 'Mon-Sun-Week1'
+when a.D_Date between '04OCT2021'd and '10OCT2021'd then 'Mon-Sun-Week2'
+when a.D_Date between '11OCT2021'd and '17OCT2021'd then 'Mon-Sun-Week3'
+when a.D_Date between '17OCT2021'd and '24OCT2021'd then 'Mon-Sun-Week4'
+when a.D_Date between '25OCT2021'd and '31OCT2021'd then 'Mon-Sun-Week5'
+when a.D_Date between '01NOV2021'd and '07NOV2021'd then 'Mon-Sun-Week1'
+when a.D_Date between '08NOV2021'd and '14NOV2021'd then 'Mon-Sun-Week2'
+when a.D_Date between '15NOV2021'd and '21NOV2021'd then 'Mon-Sun-Week3'
+when a.D_Date between '22NOV2021'd and '28NOV2021'd then 'Mon-Sun-Week4'
+when a.D_Date between '29NOV2021'd and '05DEC2021'd then 'Mon-Sun-Week1'
+when a.D_Date between '06DEC2021'd and '12DEC2021'd then 'Mon-Sun-Week2'
+when a.D_Date between '13DEC2021'd and '19DEC2021'd then 'Mon-Sun-Week3'
+when a.D_Date between '20DEC2021'd and '26DEC2021'd then 'Mon-Sun-Week4'
+when a.D_Date between '27DEC2021'd and '02JAN2022'd then 'Mon-Sun-Week1'
+when a.D_Date between '03JAN2022'd and '09JAN2022'd then 'Mon-Sun-Week2'
+when a.D_Date between '10JAN2022'd and '16JAN2022'd then 'Mon-Sun-Week3'
+when a.D_Date between '17JAN2022'd and '23JAN2022'd then 'Mon-Sun-Week4'
+
+end as Monthly_Week
+from work.EventsJ1M3App_New as a;
+quit;
+run;
+
+/* Traffic Count */
+
+proc sql;
+create table EventJ1M3App_Traffic as
+select a.D_Date, a.Month_week, a.Monthly_Week, /* visitor_returning, */ a.website_name, sum(distinct(a.Visitors)) as Traffic, sum(distinct(a.Unique_users)) as Users, sum(a.Session1) as Sessions,
+
+Case when a.device_type in("") then "Mobile_App"
+else "Mobile_App"
+end as Device_Type1
+from work.EventsJ1M3App_New1 as a
+/*from work.J1M3_Sim as a */
+group by D_Date, Month_week, Monthly_Week, Device_Type1, /* visitor_returning, */ website_name;
+quit;
+run;
+
+proc sort data= EventJ1M3App_Traffic out=EventJ1M3App_Traffic1;
+by D_Date Month_week Monthly_Week Device_Type1 /* visitor_returning, */ website_name;
+run;
+
+
+
+/* Login KPI */
+
+proc sql;
+create table EventsJ1M3_Login_App as
+select a.*, case when a.custom_event_category like "%Submit_login%" or a.custom_event_category like "%Pattern_login%"
+or a.custom_event_category like "%FaceID_login%" then "Login"
+when a.custom_event_category like "%login%" or a.custom_event_category like "%Login_bottomnav%" 
+or a.custom_event_category like "%Fingerprint_login%" or a.custom_event_category like "%forgetPW_login%"
+or a.custom_event_category like "%China_login%" or a.custom_event_category like "%th_login%" then "Navigation"
+end as Category,
+Case when a.device_type in("") then "Mobile_App"
+else "Mobile_App"
+end as Device_Type1
+from WORK.EventsJ1M3App_New1 as a where a.custom_event_category like "%Submit_login%" or a.custom_event_category like "%Pattern_login%"
+or a.custom_event_category like "%FaceID_login%" or a.custom_event_category like "%login%" or a.custom_event_category like "%Login_bottomnav%" 
+or a.custom_event_category like "%Fingerprint_login%" or a.custom_event_category like "%forgetPW_login%"
+or a.custom_event_category like "%China_login%" or a.custom_event_category like "%th_login%" ;
+quit;
+run;
+
+proc sql;
+ create table Login_test_App as
+ select D_Date, Month_week, Monthly_Week, Device_Type1, /*visitor_returning,*/ website_name, /*
+ sum(select events from work.EventsF1M3_Regis where Category in("Registration_Page","Navigation","RAF")) as Page_view, 
+ sum(select events from work.EventsF1M3_Regis where Category in("Registration")) as Submission_Events,*/ 
+  sum(Bounce) as Bounce, sum(session) as Session
+ /*sum(select events from EventsF1M3_Regis where Category in("Registration"))/sum(select events from EventsF1M3_Regis where Category in("Registration_Page","Navigation","RAF")) as Success_Rate*/
+ from EventsJ1M3_Login_App
+ group by D_Date,Month_week, Monthly_Week, Device_Type1, /* visitor_returning,*/ website_name;
+ quit;
+ 	
+ /* Login submisssion unique visitor count */
+proc sql;
+ create table Login_sub_vis_App as
+ select D_Date, Month_week, Monthly_Week, Device_Type1, /*visitor_returning,*/ website_name, sum(distinct(Visitors))as Login from EventsJ1M3_Login_App where Category in("Login")
+ group by D_Date, Month_week, Monthly_Week, Device_Type1, /*visitor_returning,*/ website_name;
+ quit;
+ 
+ proc sort data= Login_sub_vis_App out=Login_sub_vis_App1;
+ by D_Date Month_week Monthly_Week Device_Type1 /*visitor_returning */ website_name;
+ run;
+ 
+
+/* Deposit Table creation */
+
+proc sql;
+create table J1M3App_Event_Deposit as
+select a.*,
+case when a.custom_event_category like "Submit%" or a.custom_event_category like "Submit_Viete%" or a.custom_event_category like "Deposit_Vietel%"
+or a.custom_event_category like "%SubmitDeposit%" or a.custom_event_category like "Submit_Cashcard%" 
+or a.custom_event_category like "Submit_Momopay%" or a.custom_event_category like "Submit_Fastpay%" or a.custom_event_category like "%undefined"  then "Deposit"
+when a.custom_event_category like "%deposit" or a.custom_event_category like "Deposit%" or a.custom_event_category like "%backtodeposit"
+or a.custom_event_category like "Vietelplay%" or a.custom_event_category like "Transaction_created%" or a.custom_event_category like "Transaction_Created%"
+or a.custom_event_category like "%BankTransfer_LocalBank%" or a.custom_event_category like "LB_succesfu%" 
+or a.custom_event_category like "%LocalBank%" or a.custom_event_category like "Deposit%" 
+or a.custom_event_category like "ZLPPay_deposit%" or a.custom_event_category like "Deposit_homepage%"
+or a.custom_event_category like "Deposit_topnavbar%" then "Deposit_Nav"
+when a.custom_event_category like "submit_name_de%" then "Verification"
+end as Category,
+Case when device_type in("") then "Mobile_App"
+else "Mobile_App"
+end as Device_Type1 
+from EventsJ1M3App_New1 as a where a.custom_event_category like "%deposit%" or a.custom_event_category like "%Deposit%" 
+or a.custom_event_category like "%Cashcard%" or a.custom_event_category like "%Momopay%" or a.custom_event_category like "%Fastpay%"
+or a.custom_event_category like "%backtodeposit" or a.custom_event_category like "%undefined"
+or a.custom_event_category like "Vietelplay%" or a.custom_event_category like "Transaction_created%" 
+or a.custom_event_category like "Transaction_Created%"
+or a.custom_event_category like "%BankTransfer_LocalBank%" or a.custom_event_category like "LB_succesfu%" 
+or a.custom_event_category like "%LocalBank%" or a.custom_event_category like "Deposit%" 
+or a.custom_event_category like "ZLPPay_deposit%" or a.custom_event_category like "Deposit_homepage%"
+or a.custom_event_category like "Deposit_topnavbar%" ;
+quit;
+run;
+
+
+ /* Click Deposit */
+proc sql;
+create table Depo_Click_vis as
+select D_Date, Month_week, Monthly_Week, /* visitor_returning, */ website_name, sum(distinct(Visitors))as Click_visitor,
+Case when device_type in("") then "Mobile_App"
+else "Mobile_App"
+end as Device_Type1  from EventsJ1M3App_New1 as a
+where a.custom_event_category like "%deposit%" or a.custom_event_category like "%Deposit%" 
+or a.custom_event_category like "%Cashcard%" or a.custom_event_category like "%Momopay%" or a.custom_event_category like "%Fastpay%"
+or a.custom_event_category like "%backtodeposit" or a.custom_event_category like "%undefined"
+or a.custom_event_category like "Vietelplay%" or a.custom_event_category like "Transaction_created%" 
+or a.custom_event_category like "Transaction_Created%"
+or a.custom_event_category like "%BankTransfer_LocalBank%" or a.custom_event_category like "LB_succesfu%" 
+or a.custom_event_category like "%LocalBank%" or a.custom_event_category like "Deposit%" 
+or a.custom_event_category like "ZLPPay_deposit%" or a.custom_event_category like "Deposit_homepage%"
+or a.custom_event_category like "Deposit_topnavbar%" 
+and custom_event_action in("Click")
+group by D_Date, Month_week, Monthly_Week, Device_Type1, /* visitor_returning, */ website_name ;
+quit;
+ 
+proc sort  data=Depo_Click_vis out=Depo_Click_vis1;
+by D_Date Month_week Monthly_Week Device_Type1 /* visitor_returning, */ website_name;
+run;
+ 
+ 
+  /* Deposit submisssion unique visitor count */
+proc sql;
+ create table Depo_sub_vis as
+ select D_Date, Month_week, Monthly_Week, Device_Type1, /* visitor_returning, */ website_name, sum(distinct(Visitors))as submission_visitor from J1M3App_Event_Deposit where Category in("Deposit")
+ group by D_Date, Month_week, Monthly_Week, Device_Type1, /* visitor_returning, */ website_name ;
+ quit;
+ 
+ proc sort  data=Depo_sub_vis out=Depo_sub_vis1;
+ by D_Date Month_week Monthly_Week Device_Type1 /* visitor_returning, */ website_name;
+ run;
+ 
+/* Merge Data */
+
+data Deposit_Journey2;
+merge EventJ1M3App_Traffic1(in=a) Login_sub_vis_App1(in=b) Depo_Click_vis1(in=c) Depo_sub_vis1(in=d);
+by D_Date Month_week Monthly_Week Device_Type1 /* visitor_returning, */ website_name;
+if a;
+run;
+
+proc sql;
+create table Deposit_Journey3 as
+select a.*, sum(Login)/sum(Traffic) as Login_to_Traffic_Rate, sum(Login)/sum(Click_visitor) as Click_to_Login_Rate, sum(submission_visitor)/sum(Click_visitor) as Submit_to_Click_Rate
+from Deposit_Journey2 as a
+group by D_Date, Month_week, Monthly_Week, Device_Type1, /* visitor_returning, */ website_name;
+quit;
+run;
+
+data App_Deposit_Journey4;
+set Deposit_Journey3;
+format Submit_to_Click_Rate Percent8.1;
+format Click_to_Login_Rate Percent8.1;
+format Login_to_Traffic_Rate Percent8.1;
+/*KPI="Deposit"; */
+run;
+
+
+
+proc export data=App_Deposit_Journey4(/*drop=Click_to_Login_Rate*/)
+outfile="C:\Users\GB-BCP\SAS_WORK\App_Deposit_Journey4.csv"
+replace;
+run;
+
